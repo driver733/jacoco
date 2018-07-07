@@ -19,7 +19,7 @@ import java.lang.annotation.Target;
 /**
  * Filters annotated methods.
  */
-@Target(ElementType.METHOD)
-@Retention(RetentionPolicy.SOURCE)
+@Target({ElementType.CONSTRUCTOR, ElementType.METHOD, ElementType.FIELD, ElementType.TYPE})
+@Retention(RetentionPolicy.CLASS)
 public @interface ExcludeFromCoverage {
 }
